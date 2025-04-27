@@ -1,0 +1,25 @@
+<div class="container mt-4">
+    <div class="">
+        <h1>EL aroma mágico</h1>
+        <img src="cafeimg.jpg" alt="Imagen de café" class="img-fluid mb-4" >
+    </div>
+    <table class="table table-sm table-striped table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th>Nombre</th>
+          <th>Tipo</th>
+          <th>Región</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cafe of cafes">
+          <td>{{ cafe.nombre }}</td>
+          <td>{{ cafe.tipo }}</td>
+          <td>{{ cafe.region }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>total café de origen: {{cafesOrigen}}</p>
+    <p>total café blend: {{cafesOrigen}}</p>
+  </div>
+  

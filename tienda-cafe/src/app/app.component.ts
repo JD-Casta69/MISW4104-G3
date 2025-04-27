@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { ListarCafeComponent } from './cafe/components/listar-cafe/listar-cafe.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [ 
+    ListarCafeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
