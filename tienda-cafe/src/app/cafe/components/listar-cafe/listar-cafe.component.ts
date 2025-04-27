@@ -13,12 +13,20 @@ import { CommonModule } from '@angular/common';
 export class ListarCafeComponent implements OnInit{
   
   cafes: Cafe[] = [];
+  cafesOrigen: number = 0;
+  cafesBlend: number = 0;
 
   constructor(private cafeService: CafeService) { }
 
   ngOnInit(): void {
     this.cafeService.getCafes().subscribe((data) => {
       this.cafes = data;
+      this.contarCafes(); 
     });
+  }
+
+  contarCafes(): void {
+    this.cafesOrigen = this.cafes.filter(cafe => cafe.tipo === 'Café de Origen').length;
+    this.cafesBlend = this.cafes.filter(cafe => cafe.tipo === 'Blend').length;
   }
 }
