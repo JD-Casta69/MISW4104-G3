@@ -12,6 +12,8 @@ export class CafeService {
   constructor(private http: HttpClient) { }
 
   getCafes(): Observable<Cafe[]> {
+    
+    console.log(this.http.get<Cafe[]>(this.apiUrl))
     return this.http.get<Cafe[]>(this.apiUrl);
   }
 }

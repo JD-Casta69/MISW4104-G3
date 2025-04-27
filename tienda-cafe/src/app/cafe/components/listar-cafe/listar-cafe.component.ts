@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Cafe } from '../../cafe.model';
 import { CafeService } from '../../services/cafe.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-listar-cafe',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './listar-cafe.component.html',
   styleUrl: './listar-cafe.component.css'
 })
